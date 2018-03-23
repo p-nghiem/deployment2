@@ -10,7 +10,7 @@ class CourseManager(models.Manager):
         errors = {}
         course = Course.objects.filter(name = postData['name'])
 
-        print course
+#       print course
         if len(course) > 0:
             errors['exists'] = "Course already exists"
         if len(postData['name']) < 6:
